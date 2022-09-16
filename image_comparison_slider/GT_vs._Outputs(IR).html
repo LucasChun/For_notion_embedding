@@ -1,0 +1,63 @@
+<script
+  defer
+  src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"
+/>
+
+<script>
+function imgToggle1() {
+var img = document.getElementById("target");
+img.src="./images/leres_ir.png";
+}
+
+function imgToggle2() {
+var img = document.getElementById("target");
+img.src="./images/midas_ir.png";
+}
+</script>
+
+
+<style>
+  button.btn1{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    top: 320px;
+    left : 480px;
+    width: 60px;
+  }
+  button.btn2{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;    
+    position: absolute;
+    top: 320px;
+    left : 538px;
+    width: 60px;
+  }
+  #btn_group button{
+    border: 2px solid ;
+    background-color: rgba(0,0,0,0);
+    color: skyblue;
+    padding: 5px;
+  }
+  #btn_group button:hover{
+    color:white;
+    background-color: skyblue;
+  }
+</style>
+
+
+<body>
+<img-comparison-slider>
+  <img slot="first" id="label" src="./images/gt.jpeg" height="360" width="640" />
+  <img slot="second" id="target" src="./images/leres_ir.png" height="360" width="640" />
+</img-comparison-slider>
+<br>
+<div id="btn_group">
+  <button class="btn1" type="button" onclick="imgToggle1()">Leres</button>
+  <button class="btn2" type="button" onclick="imgToggle2()">MiDaS</button>
+</div>
+</body>
