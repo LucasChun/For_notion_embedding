@@ -38,8 +38,8 @@ function clear_scene() {
 window.clear_scene = clear_scene;
 
 function load() {
-    filename = document.getElementById("filename").value;
-    path = "pcd/" + filename;
+    filename = "rgb_time79_frame_50.png.pcd"// document.getElementById("filename").value;
+    path = "./" + filename;
     loader.load(path, function (points) {
 
         clear_scene();
